@@ -1,0 +1,12 @@
+[package]
+name    = "game-common"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+netcode-core = { workspace = true }
+serde        = { workspace = true }
+bincode      = { workspace = true }
+glam         = { workspace = true }
+
+[dev-dependencies]

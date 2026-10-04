@@ -1,0 +1,19 @@
+[package]
+name    = "game-client"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "game-client"
+path = "src/main.rs"
+
+[dependencies]
+netcode-core       = { workspace = true }
+game-common        = { workspace = true }
+macroquad          = { workspace = true }
+serde              = { workspace = true }
+bincode            = { workspace = true }
+glam               = { workspace = true }
+tracing            = { workspace = true }
+tracing-subscriber = { workspace = true }
+anyhow             = { workspace = true }

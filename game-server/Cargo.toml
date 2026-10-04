@@ -1,0 +1,19 @@
+[package]
+name    = "game-server"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "game-server"
+path = "src/main.rs"
+
+[dependencies]
+netcode-core       = { workspace = true }
+game-common        = { workspace = true }
+tokio              = { workspace = true }
+serde              = { workspace = true }
+bincode            = { workspace = true }
+glam               = { workspace = true }
+tracing            = { workspace = true }
+tracing-subscriber = { workspace = true }
+anyhow             = { workspace = true }
