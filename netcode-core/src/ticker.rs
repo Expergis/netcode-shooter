@@ -16,20 +16,22 @@ impl TickRate {
     pub const HZ_64: Self = Self { hz: 64 };
 
     /// Creates a custom tick rate in Hz.
-    pub fn new(_hz: u64) -> Self {
-        todo!("Construct TickRate ensuring hz > 0")
+    pub fn new(hz: u64) -> Self {
+        assert!(hz > 0, "Custom tick rate in Hz must be > 0");
+
+        Self { hz }
     }
 
     /// Returns the exact interval duration per tick.
     #[inline]
     pub fn tick_duration(&self) -> Duration {
-        todo!("Calculate Duration::from_nanos(1_000_000_000 / self.hz)")
+        return Duration::from_nanos(1_000_000_000 / self.hz);
     }
 
     /// Returns tick duration in seconds as `f32`.
     #[inline]
     pub fn dt(&self) -> f32 {
-        todo!("Return tick_duration().as_secs_f32()")
+        return self.tick_duration().as_secs_f32()
     }
 }
 
